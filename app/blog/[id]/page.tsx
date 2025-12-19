@@ -75,7 +75,28 @@ export default function BlogPostPage() {
                 8 min read
               </span>
             </div>
-            <button className="ml-auto flex items-center gap-2 text-[#4A7FFF] hover:text-[#4A7FFF]/80 transition-colors">
+            <button 
+              onClick={() => {
+                const url = window.location.href;
+                const title = 'Building Scalable SaaS Applications: Best Practices for 2024';
+                
+                // Try native share API first (mobile devices)
+                if (navigator.share) {
+                  navigator.share({
+                    title: title,
+                    url: url,
+                  }).catch(() => {
+                    // Fallback if share is cancelled
+                  });
+                } else {
+                  // Fallback: copy to clipboard
+                  navigator.clipboard.writeText(url).then(() => {
+                    alert('Link copied to clipboard!');
+                  });
+                }
+              }}
+              className="ml-auto flex items-center gap-2 text-[#4A7FFF] hover:text-[#4A7FFF]/80 transition-colors"
+            >
               <Share2 className="w-4 h-4" />
               <span className="font-[var(--font-geist)] text-sm">Share</span>
             </button>
