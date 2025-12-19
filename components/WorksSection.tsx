@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, X, Calendar, Users, TrendingUp } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, Calendar, Users, TrendingUp, ExternalLink, FileText } from 'lucide-react';
 import Image from 'next/image';
 
 interface Project {
@@ -15,6 +15,8 @@ interface Project {
   client: string;
   duration: string;
   technologies: string[];
+  liveUrl?: string;
+  caseStudyUrl?: string;
   metrics: {
     label: string;
     value: string;
@@ -27,12 +29,14 @@ const projects: Project[] = [
     id: 1,
     title: 'E-Commerce Platform',
     tags: ['Product design', 'Web development'],
-    image: '/projects/project1.jpg', // Replace with actual image
+    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=1200&h=800&fit=crop',
     gradient: 'from-purple-500 to-pink-500',
     description: 'A modern e-commerce platform built for a leading fashion retailer. Features include real-time inventory management, AI-powered recommendations, and seamless checkout experience.',
     client: 'Fashion Retail Co.',
     duration: '6 months (Jan 2024 - Jun 2024)',
     technologies: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'Stripe', 'AWS'],
+    liveUrl: 'https://example.com',
+    caseStudyUrl: '#',
     metrics: [
       { label: 'Active Users', value: '50K+', icon: Users },
       { label: 'Conversion Rate', value: '+45%', icon: TrendingUp },
@@ -43,12 +47,14 @@ const projects: Project[] = [
     id: 2,
     title: 'Healthcare Mobile App',
     tags: ['Mobile development', 'AI solutions'],
-    image: '/projects/project2.jpg',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=800&fit=crop',
     gradient: 'from-blue-500 to-cyan-500',
     description: 'An innovative healthcare app connecting patients with doctors through video consultations, AI symptom checker, and prescription management.',
     client: 'MediCare Health',
     duration: '8 months (Mar 2024 - Oct 2024)',
     technologies: ['React Native', 'TypeScript', 'Firebase', 'TensorFlow', 'WebRTC'],
+    liveUrl: 'https://example.com',
+    caseStudyUrl: '#',
     metrics: [
       { label: 'Downloads', value: '100K+', icon: Users },
       { label: 'Rating', value: '4.8/5', icon: TrendingUp },
@@ -59,12 +65,14 @@ const projects: Project[] = [
     id: 3,
     title: 'SaaS Dashboard',
     tags: ['Product design', 'Web development'],
-    image: '/projects/project3.jpg',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop',
     gradient: 'from-orange-500 to-red-500',
     description: 'A comprehensive analytics dashboard for B2B SaaS companies. Real-time data visualization, custom reports, and team collaboration features.',
     client: 'DataFlow Analytics',
     duration: '4 months (Jul 2024 - Oct 2024)',
     technologies: ['React', 'D3.js', 'Python', 'FastAPI', 'MongoDB', 'Docker'],
+    liveUrl: 'https://example.com',
+    caseStudyUrl: '#',
     metrics: [
       { label: 'Companies', value: '200+', icon: Users },
       { label: 'Data Points', value: '1M+/day', icon: TrendingUp },
@@ -75,12 +83,14 @@ const projects: Project[] = [
     id: 4,
     title: 'AI Content Generator',
     tags: ['AI solutions', 'Web development'],
-    image: '/projects/project4.jpg',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=800&fit=crop',
     gradient: 'from-green-500 to-emerald-500',
     description: 'An AI-powered content creation platform helping marketers generate blog posts, social media content, and ad copy in seconds.',
     client: 'ContentAI Inc.',
     duration: '5 months (May 2024 - Sep 2024)',
     technologies: ['Next.js', 'OpenAI API', 'Python', 'Redis', 'Vercel', 'Supabase'],
+    liveUrl: 'https://example.com',
+    caseStudyUrl: '#',
     metrics: [
       { label: 'Users', value: '25K+', icon: Users },
       { label: 'Content Generated', value: '500K+', icon: TrendingUp },
@@ -91,12 +101,14 @@ const projects: Project[] = [
     id: 5,
     title: 'Fitness Tracking App',
     tags: ['Mobile development', 'Product design'],
-    image: '/projects/project5.jpg',
+    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&h=800&fit=crop',
     gradient: 'from-pink-500 to-rose-500',
     description: 'A comprehensive fitness app with workout tracking, nutrition planning, and social features to keep users motivated.',
     client: 'FitLife Studios',
     duration: '7 months (Feb 2024 - Aug 2024)',
     technologies: ['Flutter', 'Dart', 'Firebase', 'HealthKit', 'Google Fit'],
+    liveUrl: 'https://example.com',
+    caseStudyUrl: '#',
     metrics: [
       { label: 'Active Users', value: '75K+', icon: Users },
       { label: 'Workouts Logged', value: '1M+', icon: TrendingUp },
@@ -189,19 +201,17 @@ export default function WorksSection() {
                 >
                 {/* Project Card */}
                 <div className="relative h-[350px] md:h-[450px] lg:h-[550px] rounded-2xl overflow-hidden">
-                  {/* Gradient Background (placeholder) */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-80`} />
-                  
-                  {/* Image Overlay (when you add real images) */}
-                  {/* <Image
+                  {/* Project Image */}
+                  <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     className="object-cover"
-                  /> */}
+                    sizes="(max-width: 768px) 90vw, 75vw"
+                  />
 
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-8">
@@ -302,14 +312,14 @@ export default function WorksSection() {
                 </button>
 
                 {/* Hero Image */}
-                <div className={`relative h-[250px] md:h-[350px] lg:h-[450px] bg-gradient-to-br ${selectedProject.gradient}`}>
-                  {/* Replace with actual image */}
-                  {/* <Image
+                <div className="relative h-[250px] md:h-[350px] lg:h-[450px]">
+                  <Image
                     src={selectedProject.image}
                     alt={selectedProject.title}
                     fill
                     className="object-cover"
-                  /> */}
+                    sizes="(max-width: 768px) 90vw, 1024px"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent" />
                 </div>
 
@@ -331,9 +341,35 @@ export default function WorksSection() {
                   </div>
 
                   {/* Description */}
-                  <p className="font-[var(--font-geist)] text-white/80 text-base leading-relaxed mb-8">
+                  <p className="font-[var(--font-geist)] text-white/80 text-base leading-relaxed mb-6">
                     {selectedProject.description}
                   </p>
+
+                  {/* Project Links */}
+                  <div className="flex flex-wrap gap-3 mb-8">
+                    {selectedProject.liveUrl && (
+                      <a
+                        href={selectedProject.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-5 py-2.5 bg-[#4A7FFF] text-white rounded-full font-[var(--font-geist)] text-sm hover:bg-[#4A7FFF]/90 transition-all duration-300"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        View Live Site
+                      </a>
+                    )}
+                    {selectedProject.caseStudyUrl && (
+                      <a
+                        href={selectedProject.caseStudyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-5 py-2.5 bg-white/10 text-white border border-white/20 rounded-full font-[var(--font-geist)] text-sm hover:bg-white/20 transition-all duration-300"
+                      >
+                        <FileText className="w-4 h-4" />
+                        Case Study
+                      </a>
+                    )}
+                  </div>
 
                   {/* Project Details Grid */}
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
