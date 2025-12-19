@@ -6,6 +6,7 @@ import ServicesSection from '@/components/ServicesSection';
 import WhyChooseSection from '@/components/WhyChooseSection';
 import FAQSection from '@/components/FAQSection';
 import CollaborationHero from '@/components/CollaborationHero';
+import Footer from '@/components/Footer';
 import ContactModal from '@/components/ContactModal';
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <WhyChooseSection />
       <FAQSection />
       <CollaborationHero />
+      <Footer />
       <ContactModal />
     </main>
   );
