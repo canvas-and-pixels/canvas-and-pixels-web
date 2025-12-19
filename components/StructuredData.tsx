@@ -1,0 +1,88 @@
+export default function StructuredData() {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Canvas&Pixels',
+    url: 'https://canvasandpixels.com',
+    logo: 'https://canvasandpixels.com/logo.png',
+    description:
+      'A software studio based in Ontario, Canada, helping businesses in North America and Europe build innovative products that drive impact.',
+    address: {
+      '@type': 'PostalAddress',
+      addressRegion: 'ON',
+      addressCountry: 'CA',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-234-816-3509',
+      contactType: 'customer service',
+      areaServed: ['US', 'CA', 'GB', 'EU'],
+      availableLanguage: ['English'],
+    },
+    sameAs: [
+      'https://www.linkedin.com/company/canvasandpixels',
+      'https://instagram.com/canvasandpixels',
+      'https://facebook.com/canvasandpixels',
+    ],
+  };
+
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Canvas&Pixels',
+    image: 'https://canvasandpixels.com/logo.png',
+    '@id': 'https://canvasandpixels.com',
+    url: 'https://canvasandpixels.com',
+    telephone: '+1-234-816-3509',
+    address: {
+      '@type': 'PostalAddress',
+      addressRegion: 'ON',
+      addressCountry: 'CA',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '43.6532',
+      longitude: '-79.3832',
+    },
+    priceRange: '$$$',
+    currenciesAccepted: 'USD, CAD, EUR, GBP',
+    paymentAccepted: 'Credit Card, Bank Transfer, PayPal',
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '17:00',
+    },
+    areaServed: [
+      {
+        '@type': 'Country',
+        name: 'United States',
+      },
+      {
+        '@type': 'Country',
+        name: 'Canada',
+      },
+      {
+        '@type': 'Country',
+        name: 'United Kingdom',
+      },
+      {
+        '@type': 'Place',
+        name: 'European Union',
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+    </>
+  );
+}

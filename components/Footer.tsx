@@ -35,10 +35,10 @@ export default function Footer() {
         >
           {/* Phone */}
           <a
-            href="tel:+2348163509379"
+            href="tel:+12348163509"
             className="font-[var(--font-geist)] text-white text-base md:text-lg hover:text-white/70 transition-colors duration-300 flex items-center gap-2"
           >
-            (+234) 8163509379
+            +1 (234) 816-3509
             <ExternalLink className="w-4 h-4" />
           </a>
 
@@ -50,6 +50,17 @@ export default function Footer() {
             className="font-[var(--font-geist)] text-white text-base md:text-lg hover:text-white/70 transition-colors duration-300 flex items-center gap-2"
           >
             Email
+            <ExternalLink className="w-4 h-4" />
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/company/canvasandpixels"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-[var(--font-geist)] text-white text-base md:text-lg hover:text-white/70 transition-colors duration-300 flex items-center gap-2"
+          >
+            LinkedIn
             <ExternalLink className="w-4 h-4" />
           </a>
 

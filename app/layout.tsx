@@ -28,22 +28,25 @@ const openSauce = Geist({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://canvasandpixels.com'),
-  title: "Canvas&Pixels - Where Ideas Come to Life",
-  description: "A software studio dedicated to helping small businesses and individual clients build innovative products that drive impact. Expert guidance through every stage of product development.",
-  keywords: ["software studio", "product design", "mobile development", "web development", "AI solutions", "software development"],
+  title: "Canvas&Pixels - Where Ideas Come to Life | Ontario, Canada",
+  description: "A software studio based in Ontario, Canada, helping businesses in North America and Europe build innovative products. Expert guidance through every stage of product development. Serving USD and Euro clients.",
+  keywords: ["software studio", "product design", "mobile development", "web development", "AI solutions", "software development", "Ontario", "Canada", "North America", "Europe", "USD", "EUR"],
   authors: [{ name: "Canvas&Pixels" }],
   openGraph: {
     title: "Canvas&Pixels - Where Ideas Come to Life",
-    description: "A software studio dedicated to helping small businesses build innovative products that drive impact.",
+    description: "Ontario-based software studio helping businesses in North America and Europe build innovative products that drive impact.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "Canvas&Pixels - Where Ideas Come to Life",
-    description: "A software studio dedicated to helping small businesses build innovative products that drive impact.",
+    description: "Ontario-based software studio helping businesses in North America and Europe build innovative products.",
   },
 };
+
+import Analytics from '@/components/Analytics';
+import StructuredData from '@/components/StructuredData';
 
 export default function RootLayout({
   children,
@@ -52,10 +55,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <StructuredData />
+      </head>
       <body
         className={`${geist.variable} ${playfair.variable} ${openSauce.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
