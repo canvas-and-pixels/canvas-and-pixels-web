@@ -19,6 +19,20 @@ export default function Header() {
 
   const navItems = ['Works', 'Services', 'About', 'Blog', 'Contact'];
 
+  const handleNavClick = (item: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (item === 'Contact') {
+      e.preventDefault();
+      const modal = document.getElementById('contact-modal');
+      if (modal) modal.classList.remove('hidden');
+    }
+  };
+
+  const getNavHref = (item: string) => {
+    if (item === 'Blog') return '/blog';
+    if (item === 'Contact') return '#contact';
+    return `/#${item.toLowerCase()}`;
+  };
+
   return (
     <>
       <motion.header
@@ -32,7 +46,7 @@ export default function Header() {
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
           <div className="flex items-center justify-between h-20 md:h-24">
             {/* Logo */}
-            <div className="flex items-center gap-3">
+            <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <Image
                 src="/logo.png"
                 alt="Canvas&Pixels Logo"
@@ -43,14 +57,15 @@ export default function Header() {
               <span className="text-white font-[var(--font-open-sauce)] font-normal text-lg">
                 Canvas&Pixels
               </span>
-            </div>
+            </a>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-1 h-10 px-2 rounded-full border border-white/10 bg-white/5">
               {navItems.map((item) => (
                 <a
                   key={item}
-                  href={item === 'Blog' ? '/blog' : `#${item.toLowerCase()}`}
+                  href={getNavHref(item)}
+                  onClick={(e) => handleNavClick(item, e)}
                   className="text-white/80 hover:text-white transition-colors duration-300 font-[var(--font-geist)] text-sm px-5 flex items-center h-full"
                 >
                   {item}
@@ -119,11 +134,14 @@ export default function Header() {
                   {navItems.map((item, index) => (
                     <motion.a
                       key={item}
-                      href={item === 'Blog' ? '/blog' : `#${item.toLowerCase()}`}
+                      href={getNavHref(item)}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={(e) => {
+                        handleNavClick(item, e);
+                        setIsMobileMenuOpen(false);
+                      }}
                       className="text-white text-xl font-[var(--font-geist)] hover:text-white/70 transition-colors"
                     >
                       {item}
