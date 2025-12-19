@@ -29,7 +29,7 @@ const openSauce = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL('https://canvasandpixels.com'),
   title: "Canvas&Pixels - Where Ideas Come to Life | Ontario, Canada",
-  description: "A software studio based in Ontario, Canada, helping businesses in North America and Europe build innovative products. Expert guidance through every stage of product development. Serving USD and Euro clients.",
+  description: "A software studio based in Ontario, Canada, helping businesses worldwide build innovative products. Expert guidance through every stage of product development, from research to deployment.",
   keywords: ["software studio", "product design", "mobile development", "web development", "AI solutions", "software development", "Ontario", "Canada", "North America", "Europe", "USD", "EUR"],
   authors: [{ name: "Canvas&Pixels" }],
   openGraph: {

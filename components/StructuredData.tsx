@@ -6,7 +6,7 @@ export default function StructuredData() {
     url: 'https://canvasandpixels.com',
     logo: 'https://canvasandpixels.com/logo.png',
     description:
-      'A software studio based in Ontario, Canada, helping businesses in North America and Europe build innovative products that drive impact.',
+      'A software studio based in Ontario, Canada, helping businesses worldwide build innovative products that drive impact.',
     address: {
       '@type': 'PostalAddress',
       addressRegion: 'ON',
@@ -16,7 +16,7 @@ export default function StructuredData() {
       '@type': 'ContactPoint',
       telephone: '+1-234-816-3509',
       contactType: 'customer service',
-      areaServed: ['US', 'CA', 'GB', 'EU'],
+      areaServed: 'Worldwide',
       availableLanguage: ['English'],
     },
     sameAs: [
@@ -53,24 +53,10 @@ export default function StructuredData() {
       opens: '09:00',
       closes: '17:00',
     },
-    areaServed: [
-      {
-        '@type': 'Country',
-        name: 'United States',
-      },
-      {
-        '@type': 'Country',
-        name: 'Canada',
-      },
-      {
-        '@type': 'Country',
-        name: 'United Kingdom',
-      },
-      {
-        '@type': 'Place',
-        name: 'European Union',
-      },
-    ],
+    areaServed: {
+      '@type': 'Place',
+      name: 'Worldwide',
+    },
   };
 
   return (
