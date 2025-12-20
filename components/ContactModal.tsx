@@ -28,19 +28,19 @@ export default function ContactModal() {
       icon: Mail,
       title: 'Email',
       description: 'Send us an email',
-      action: 'mailto:hello@canvasandpixels.com',
+      action: 'mailto:canvasandpixels01@gmail.com',
     },
     {
       icon: MessageCircle,
       title: 'WhatsApp',
       description: 'Chat with us',
-      action: 'https://wa.me/1234567890',
+      action: 'https://wa.me/2348163509379',
     },
     {
       icon: Calendar,
       title: 'Book a Call',
       description: 'Schedule a meeting',
-      action: '#calendar',
+      action: 'https://cal.com/canvasandpixels/30min',
     },
   ];
 

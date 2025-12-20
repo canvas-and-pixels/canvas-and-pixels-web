@@ -14,15 +14,15 @@ export default function StructuredData() {
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-234-816-3509',
+      telephone: '+234-816-350-9379',
       contactType: 'customer service',
       areaServed: 'Worldwide',
       availableLanguage: ['English'],
     },
     sameAs: [
-      'https://www.linkedin.com/company/canvasandpixels',
-      'https://instagram.com/canvasandpixels',
-      'https://facebook.com/canvasandpixels',
+      'https://www.linkedin.com/company/canvas-and-pixels/',
+      'https://www.instagram.com/canvasnpixels/',
+      'https://x.com/canvasandpixels',
     ],
   };
 
@@ -33,7 +33,7 @@ export default function StructuredData() {
     image: 'https://canvasandpixels.com/logo.png',
     '@id': 'https://canvasandpixels.com',
     url: 'https://canvasandpixels.com',
-    telephone: '+1-234-816-3509',
+    telephone: '+234-816-350-9379',
     address: {
       '@type': 'PostalAddress',
       addressRegion: 'ON',

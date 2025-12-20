@@ -35,16 +35,16 @@ export default function Footer() {
         >
           {/* Phone */}
           <a
-            href="tel:+12348163509"
+            href="tel:+2348163509379"
             className="font-[var(--font-geist)] text-white text-base md:text-lg hover:text-white/70 transition-colors duration-300 flex items-center gap-2"
           >
-            +1 (234) 816-3509
+            +234 816 350 9379
             <ExternalLink className="w-4 h-4" />
           </a>
 
           {/* Email */}
           <a
-            href="mailto:hello@canvasandpixels.com"
+            href="mailto:canvasandpixels01@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             className="font-[var(--font-geist)] text-white text-base md:text-lg hover:text-white/70 transition-colors duration-300 flex items-center gap-2"
@@ -55,7 +55,7 @@ export default function Footer() {
 
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/company/canvasandpixels"
+            href="https://www.linkedin.com/company/canvas-and-pixels/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-[var(--font-geist)] text-white text-base md:text-lg hover:text-white/70 transition-colors duration-300 flex items-center gap-2"
@@ -66,7 +66,7 @@ export default function Footer() {
 
           {/* Instagram */}
           <a
-            href="https://instagram.com/canvasandpixels"
+            href="https://www.instagram.com/canvasnpixels/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-[var(--font-geist)] text-white text-base md:text-lg hover:text-white/70 transition-colors duration-300 flex items-center gap-2"
@@ -75,14 +75,14 @@ export default function Footer() {
             <ExternalLink className="w-4 h-4" />
           </a>
 
-          {/* Facebook */}
+          {/* X (Twitter) */}
           <a
-            href="https://facebook.com/canvasandpixels"
+            href="https://x.com/canvasandpixels"
             target="_blank"
             rel="noopener noreferrer"
             className="font-[var(--font-geist)] text-white text-base md:text-lg hover:text-white/70 transition-colors duration-300 flex items-center gap-2"
           >
-            Facebook
+            X
             <ExternalLink className="w-4 h-4" />
           </a>
         </motion.div>
