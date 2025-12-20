@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Code, Figma, Film, Smartphone, Monitor } from 'lucide-react';
+import { Code, Figma, Sparkles, Smartphone, Monitor } from 'lucide-react';
 
 interface Service {
   id: number;
@@ -15,32 +15,32 @@ const services: Service[] = [
   {
     id: 1,
     title: 'Web development',
-    description: 'Lorem ipsum dolor sit amet consectetur. Pulvinar velit vulputate eu a sed nulla purus. Vitae lacinia vehicula lectus augue maecenas.',
+    description: 'Build fast, scalable web applications with modern frameworks like React and Next.js. From landing pages to complex SaaS platforms, we create responsive experiences that drive results.',
     icon: Code,
   },
   {
     id: 2,
     title: 'Product design',
-    description: 'Lorem ipsum dolor sit amet consectetur. Pulvinar velit vulputate eu a sed nulla purus. Vitae lacinia vehicula lectus augue maecenas.',
+    description: 'Transform ideas into intuitive, beautiful interfaces. Our design process combines user research, prototyping, and testing to create products people love to use.',
     icon: Figma,
   },
   {
     id: 3,
-    title: 'Motion design',
-    description: 'Lorem ipsum dolor sit amet consectetur. Pulvinar velit vulputate eu a sed nulla purus. Vitae lacinia vehicula lectus augue maecenas.',
-    icon: Film,
+    title: 'AI solutions',
+    description: 'Integrate cutting-edge AI capabilities into your products. From ChatGPT integration to custom machine learning models, we help you leverage AI to automate workflows and enhance user experiences.',
+    icon: Sparkles,
   },
   {
     id: 4,
-    title: 'Mobile development [hybrid]',
-    description: 'Lorem ipsum dolor sit amet consectetur. Nibh turpis tempor tempus feugiat urna bibendum leo eu. Mattis suspendisse in eu volutpat turpis. Ipsum vitae enim vel vivamus senectus. Mattis lacus in ultricies eget at adipiscing dignissim. Risus turpis porta tempor tincidunt nunc. Sed consectetur facilisis commodo sed elementum. Commodo diam purus viverra.',
+    title: 'Mobile development',
+    description: 'Native iOS and Android apps, or cross-platform solutions with React Native and Flutter. We build mobile experiences that feel natural on every device, from consumer apps to enterprise solutions. Whether you need a standalone mobile app or a companion to your web platform, we deliver quality across all screen sizes.',
     icon: Smartphone,
     isWide: true,
   },
   {
     id: 5,
     title: 'Custom software',
-    description: 'Lorem ipsum dolor sit amet consectetur. Pulvinar velit vulputate eu a sed nulla purus. Vitae lacinia vehicula lectus augue maecenas.',
+    description: 'Tailored solutions for unique business challenges. We build custom tools, internal platforms, and specialized software that fits your exact requirements and scales with your growth.',
     icon: Monitor,
   },
 ];
