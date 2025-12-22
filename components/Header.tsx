@@ -39,8 +39,8 @@ export default function Header() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'backdrop-blur-md bg-[#1a1a1a]/80 shadow-lg' : ''
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-[#1a1a1a]/95 ${
+          isScrolled ? 'shadow-lg' : ''
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">

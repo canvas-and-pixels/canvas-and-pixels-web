@@ -75,7 +75,7 @@ const projects: Project[] = [
     technologies: ['Flutter', 'Firebase', 'Node.js', 'Digital Ocean', 'PostgreSQL'],
     liveUrl: 'https://projectbist.com',
     appStoreUrl: undefined,
-    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.projectbist.app&pcampaignid=web_share', // Add your Google Play Store URL here
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.projectbist.app&pcampaignid=web_share',
     metrics: [
 
       { label: 'Launch Date', value: '2024', icon: Calendar },
