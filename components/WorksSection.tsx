@@ -39,10 +39,9 @@ const projects: Project[] = [
     technologies: ['Flutter', 'Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Firebase', 'Tailwind CSS'],
     liveUrl: 'https://peonykids.co',
     appStoreUrl: '#', // Add your App Store URL here
-    playStoreUrl: '#', // Add your Google Play Store URL here
-    caseStudyUrl: '#',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.peony.peonykids&pcampaignid=web_share',
     metrics: [
-      { label: 'Daily Check-ins', value: '500+', icon: Users },
+      { label: 'Daily Check-ins', value: '100+', icon: Users },
       { label: 'Parent Satisfaction', value: '98%', icon: TrendingUp },
       { label: 'Launch Date', value: '2024', icon: Calendar },
     ],
@@ -316,7 +315,7 @@ export default function WorksSection() {
                         Google Play
                       </a>
                     )}
-                    {selectedProject.caseStudyUrl && (
+                    {selectedProject.caseStudyUrl && selectedProject.caseStudyUrl !== '#' && (
                       <a
                         href={selectedProject.caseStudyUrl}
                         target="_blank"
@@ -339,14 +338,16 @@ export default function WorksSection() {
                         {selectedProject.client}
                       </p>
                     </div>
-                    <div>
-                      <h3 className="font-[var(--font-geist)] font-normal text-white/60 text-sm mb-2">
-                        Duration
-                      </h3>
-                      <p className="font-[var(--font-geist)] text-white text-base">
-                        {selectedProject.duration}
-                      </p>
-                    </div>
+                    {selectedProject.duration && (
+                      <div>
+                        <h3 className="font-[var(--font-geist)] font-normal text-white/60 text-sm mb-2">
+                          Duration
+                        </h3>
+                        <p className="font-[var(--font-geist)] text-white text-base">
+                          {selectedProject.duration}
+                        </p>
+                      </div>
+                    )}
                   </div>
 
                   {/* Technologies */}
