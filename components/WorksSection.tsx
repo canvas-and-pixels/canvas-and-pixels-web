@@ -63,6 +63,24 @@ const projects: Project[] = [
       { label: 'Expected Launch', value: 'Q1 2026', icon: Calendar },
     ],
   },
+  {
+    id: 3,
+    title: 'ProjectBist',
+    tags: ['Mobile development', 'Product design', 'AI solutions'],
+    image: '/projectbist.webp',
+    gradient: 'from-green-500 to-emerald-500',
+    description: 'A marketplace platform connecting researchers and clients for collaborative research and learning. Like Upwork for research, ProjectBist enables researchers to find projects, clients to hire experts, and facilitates mentorship opportunities. The platform features a curated publication repository for insights and references, plus built-in plagiarism and AI-generated content detection to ensure research authenticity and academic integrity.',
+    client: 'ProjectBist',
+    duration: '',
+    technologies: ['Flutter', 'Firebase', 'Node.js', 'AI/ML', 'PostgreSQL'],
+    liveUrl: 'https://projectbist.com',
+    appStoreUrl: undefined,
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.projectbist.app&pcampaignid=web_share', // Add your Google Play Store URL here
+    metrics: [
+
+      { label: 'Launch Date', value: '2024', icon: Calendar },
+    ],
+  },
 ];
 
 export default function WorksSection() {
