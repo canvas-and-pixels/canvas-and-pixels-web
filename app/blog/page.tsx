@@ -109,7 +109,7 @@ export default function BlogPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-[#f8f8f8] pt-20">
+      <main className="min-h-screen bg-[#1a1a1a] pt-20">
         {/* Hero Section */}
         <section className="bg-[#1a1a1a] py-16 md:py-24">
           <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
@@ -130,7 +130,7 @@ export default function BlogPage() {
         </section>
 
         {/* Categories */}
-        <section className="py-8 border-b border-[#e0e0e0]">
+        <section className="py-8 border-b border-white/10">
           <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
             <div className="flex flex-wrap gap-3 justify-center">
               {categories.map((category) => (
@@ -139,7 +139,7 @@ export default function BlogPage() {
                   className={`px-4 py-2 rounded-full font-[var(--font-geist)] text-sm transition-all duration-300 ${
                     category === 'All'
                       ? 'bg-[#4A7FFF] text-white'
-                      : 'bg-white text-[#1a1a1a] hover:bg-[#4A7FFF]/10 border border-[#e0e0e0]'
+                      : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                   }`}
                 >
                   {category}
@@ -159,7 +159,7 @@ export default function BlogPage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group"
+                  className="bg-[#2a2a2a] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-white/10"
                 >
                   {/* Image */}
                   <Link href={`/blog/${post.id}`} className="block relative h-48 overflow-hidden">
@@ -180,7 +180,7 @@ export default function BlogPage() {
                   {/* Content */}
                   <div className="p-6">
                     {/* Meta */}
-                    <div className="flex items-center gap-4 mb-3 text-sm text-[#1a1a1a]/60">
+                    <div className="flex items-center gap-4 mb-3 text-sm text-white/60">
                       <span className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
                         {post.date}
@@ -193,18 +193,18 @@ export default function BlogPage() {
 
                     {/* Title */}
                     <Link href={`/blog/${post.id}`}>
-                      <h2 className="font-[var(--font-geist)] font-semibold text-xl text-[#1a1a1a] mb-3 group-hover:text-[#4A7FFF] transition-colors line-clamp-2">
+                      <h2 className="font-[var(--font-geist)] font-semibold text-xl text-white mb-3 group-hover:text-[#4A7FFF] transition-colors line-clamp-2">
                         {post.title}
                       </h2>
                     </Link>
 
                     {/* Excerpt */}
-                    <p className="font-[var(--font-geist)] text-[#1a1a1a]/70 text-sm leading-relaxed mb-4 line-clamp-3">
+                    <p className="font-[var(--font-geist)] text-white/70 text-sm leading-relaxed mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
 
                     {/* Author & Read More */}
-                    <div className="flex items-center justify-between pt-4 border-t border-[#e0e0e0]">
+                    <div className="flex items-center justify-between pt-4 border-t border-white/10">
                       <div className="flex items-center gap-3">
                         <Image
                           src={post.author.avatar}
@@ -213,7 +213,7 @@ export default function BlogPage() {
                           height={32}
                           className="rounded-full"
                         />
-                        <span className="font-[var(--font-geist)] text-sm text-[#1a1a1a]">
+                        <span className="font-[var(--font-geist)] text-sm text-white">
                           {post.author.name}
                         </span>
                       </div>
