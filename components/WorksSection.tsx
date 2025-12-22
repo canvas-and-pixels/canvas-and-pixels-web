@@ -66,13 +66,13 @@ const projects: Project[] = [
   {
     id: 3,
     title: 'ProjectBist',
-    tags: ['Mobile development', 'Product design', 'AI solutions'],
+    tags: ['Mobile development', 'Marketplace', "Payment", "Research"],
     image: '/projectbist.webp',
     gradient: 'from-green-500 to-emerald-500',
     description: 'A marketplace platform connecting researchers and clients for collaborative research and learning. Like Upwork for research, ProjectBist enables researchers to find projects, clients to hire experts, and facilitates mentorship opportunities. The platform features a curated publication repository for insights and references, plus built-in plagiarism and AI-generated content detection to ensure research authenticity and academic integrity.',
     client: 'ProjectBist',
     duration: '',
-    technologies: ['Flutter', 'Firebase', 'Node.js', 'AI/ML', 'PostgreSQL'],
+    technologies: ['Flutter', 'Firebase', 'Node.js', 'Digital Ocean', 'PostgreSQL'],
     liveUrl: 'https://projectbist.com',
     appStoreUrl: undefined,
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.projectbist.app&pcampaignid=web_share', // Add your Google Play Store URL here
@@ -82,6 +82,7 @@ const projects: Project[] = [
     ],
   },
 ];
+
 
 export default function WorksSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
