@@ -29,12 +29,12 @@ export default function AboutSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-8 md:mb-12"
           >
-            <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-2xl shadow-2xl">
+            <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-xl shadow-2xl">
               <Image
                 src="/logo.png"
                 alt="Canvas&Pixels Icon"
                 fill
-                className="object-cover rounded-2xl"
+                className="object-cover rounded-xl"
               />
             </div>
           </motion.div>
