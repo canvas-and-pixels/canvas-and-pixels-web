@@ -54,13 +54,12 @@ const projects: Project[] = [
     gradient: 'from-purple-500 to-indigo-500',
     description: 'A smart productivity and time-tracking application designed for professionals who want to master their focus and understand how they spend their time. Focuslog combines Pomodoro technique with intelligent project tracking, allowing users to create custom projects with tags, track activities across devices, and gain deep insights through AI-powered analytics. Whether you\'re timing a 13-minute task or tracking a month-long project, Focuslog provides comprehensive analytics to help you optimize your productivity and understand your work patterns.',
     client: 'Focuslog',
-    duration: '6 months (2024)',
     technologies: ['Flutter', 'Next.js', 'TypeScript', 'AI/ML', 'PostgreSQL', 'Supabase', 'Chrome Extension'],
     liveUrl: 'https://usefocuslog.app',
     metrics: [
-      { label: 'Active Users', value: '1K+', icon: Users },
-      { label: 'Time Tracked', value: '10K+ hrs', icon: TrendingUp },
-      { label: 'Launch Date', value: '2024', icon: Calendar },
+      { label: 'Status', value: 'In Progress', icon: TrendingUp },
+      { label: 'Platform', value: 'Cross-platform', icon: Users },
+      { label: 'Expected Launch', value: 'Q1 2025', icon: Calendar },
     ],
   },
 ];
