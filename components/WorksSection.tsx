@@ -35,7 +35,7 @@ const projects: Project[] = [
     gradient: 'from-pink-500 to-rose-500',
     description: 'A modern daycare management application that streamlines daily operations for childcare providers. Peony enables seamless check-in/check-out processes, real-time updates about children\'s activities, meals, and milestones, and secure parent-teacher communication. The platform includes both a mobile app for parents and staff, plus a comprehensive admin dashboard for daycare management.',
     client: 'Peony Daycare Solutions',
-    duration: '6 months (2024)',
+    duration: '',
     technologies: ['Flutter', 'Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Firebase', 'Tailwind CSS'],
     liveUrl: 'https://peonykids.co',
     appStoreUrl: 'https://apps.apple.com/us/app/peonykids/id6714483325',
@@ -56,6 +56,7 @@ const projects: Project[] = [
     client: 'Focuslog',
     technologies: ['Flutter', 'Next.js', 'TypeScript', 'AI/ML', 'PostgreSQL', 'Supabase'],
     liveUrl: 'https://usefocuslog.app',
+    duration: '',
     metrics: [
       { label: 'Status', value: 'In Development', icon: TrendingUp },
       { label: 'Platforms', value: 'Mobile & Web', icon: Users },
