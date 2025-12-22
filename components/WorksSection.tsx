@@ -407,7 +407,7 @@ export default function WorksSection() {
                     <h3 className="font-[var(--font-geist)] font-normal text-white/60 text-sm mb-4">
                       Key Metrics
                     </h3>
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                       {selectedProject.metrics.map((metric) => {
                         const Icon = metric.icon;
                         return (
