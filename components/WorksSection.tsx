@@ -55,12 +55,12 @@ const projects: Project[] = [
     description: 'A smart productivity and time-tracking application designed for professionals who want to master their focus and understand how they spend their time. Focuslog combines the Pomodoro technique with intelligent project tracking, allowing users to create custom projects with tags, track activities across devices, and gain deep insights through AI-powered analytics. Whether timing a 13-minute task or tracking a month-long project, Focuslog provides comprehensive analytics to help optimize productivity and understand work patterns.',
     client: 'Focuslog',
     technologies: ['Flutter', 'Next.js', 'TypeScript', 'AI/ML', 'PostgreSQL', 'Supabase'],
-    liveUrl: 'https://usefocuslog.app',
+    liveUrl: 'https://usefocuslog.vercel.app/',
     duration: '',
     metrics: [
       { label: 'Status', value: 'In Development', icon: TrendingUp },
-      { label: 'Platforms', value: 'Mobile & Web', icon: Users },
-      { label: 'Expected Launch', value: 'Q1 2025', icon: Calendar },
+      { label: 'Platforms', value: 'Mobile & Desktop', icon: Users },
+      { label: 'Expected Launch', value: 'Q1 2026', icon: Calendar },
     ],
   },
 ];
